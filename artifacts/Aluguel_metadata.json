@@ -1,0 +1,299 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nomeLocador",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_nomeLocatario",
+						"type": "string"
+					},
+					{
+						"internalType": "address payable",
+						"name": "_contaLocador",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_valorDoAluguel",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "valorCerto",
+						"type": "uint256"
+					}
+				],
+				"name": "aditamentoValorAluguel",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "mesesRestantes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "percentual",
+						"type": "uint256"
+					}
+				],
+				"name": "aplicaMulta",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "contaLocador",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "historicoDePagto",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "valorTotalRecebido",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numAluguelRecebido",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "locador",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "locatario",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "numeroMaximoLegalDeAlugueisParaMulta",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "quantosPagamentosJaForamFeitos",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "percentualReajuste",
+						"type": "uint256"
+					}
+				],
+				"name": "reajustaAluguel",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "receberPagamento",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_parametro",
+						"type": "uint256"
+					}
+				],
+				"name": "retornaTexto",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "mesesRestantes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalMesesContrato",
+						"type": "uint256"
+					}
+				],
+				"name": "simulaMulta",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "valorMulta",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "statusPagamento",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "quandoFoiPago",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "valorPago",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "valorAtualDoAluguel",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"nuclea-aula05.sol": "Aluguel"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"nuclea-aula05.sol": {
+			"keccak256": "0x7ac9fae1f39cfa1fdd0c18003a1d9e80e45ff1571b3dc8a7ab1c9b2c31d8c5a2",
+			"license": "CC-BY-4.0",
+			"urls": [
+				"bzz-raw://ddd0ceb2f5b5575c399edac8f5fd9c8e7b93d697a5a9582810ac91ba7f03d709",
+				"dweb:/ipfs/QmQHqnfyWCKdhN7yki2AvARknZiWq7sDmHVvi3VZzE1cpa"
+			]
+		}
+	},
+	"version": 1
+}
