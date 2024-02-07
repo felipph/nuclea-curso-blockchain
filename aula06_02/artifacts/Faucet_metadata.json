@@ -1,0 +1,99 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "paraQuem",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "quanto",
+						"type": "uint8"
+					}
+				],
+				"name": "AconteceuUmaAtribuicao",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "atribuicoes",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "atribuirValor",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Jeff Prestes",
+			"kind": "dev",
+			"methods": {},
+			"title": "Um exemplo de Faucet",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"aula06_02/faucet.sol": "Faucet"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"aula06_02/faucet.sol": {
+			"keccak256": "0x72ef1d173a25b792afd7099752de2ee876c0e32ba2dc58eef298c86988ee8d8a",
+			"license": "CC-BY-4.0",
+			"urls": [
+				"bzz-raw://03c74de3e9f338466a1dc79ad18df6d801ae47d095a4ec74a82675cdd078d457",
+				"dweb:/ipfs/QmZ5wJrGnG5TthyhnwYcenjvV38R91T29bL7TqYTeTHzcB"
+			]
+		}
+	},
+	"version": 1
+}

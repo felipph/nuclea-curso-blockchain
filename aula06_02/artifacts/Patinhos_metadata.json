@@ -1,0 +1,144 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address[]",
+						"name": "patinhos",
+						"type": "address[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "quantos",
+						"type": "uint8"
+					}
+				],
+				"name": "MamaePatinhoFoiBuscar",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "patinho",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "quantos",
+						"type": "uint8"
+					}
+				],
+				"name": "NovoPatinhoFoiPassear",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "mamaeBuscaPatos",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "pato",
+						"type": "address"
+					}
+				],
+				"name": "novoPatinho",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "patinhosUnicos",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalPatinhos",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Felipph Calado",
+			"kind": "dev",
+			"methods": {},
+			"title": "Patinhos foram",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"aula06_02/atividade.sol": "Patinhos"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"aula06_02/atividade.sol": {
+			"keccak256": "0x3fda4dace743e5118dfdee18e87ec96475484bb1938cc36af5d4af2ec409a101",
+			"license": "CC-BY-4.0",
+			"urls": [
+				"bzz-raw://a44131c6b42734d4d12bc270aa6c76ae3474143b828d4fc4923fcc04375e0395",
+				"dweb:/ipfs/QmdBufP3a6ph1Qdnz87qNRUjJ2NrB12Vioq7Kpibijohpa"
+			]
+		}
+	},
+	"version": 1
+}
