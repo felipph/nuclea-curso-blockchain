@@ -1,0 +1,306 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "prazoAntigo",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "prazoNovo",
+						"type": "uint256"
+					}
+				],
+				"name": "NovoPrazoPagamento",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "oldOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnerSet",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "fracoes_",
+						"type": "uint16"
+					}
+				],
+				"name": "alteraFracoes",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "changeOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "dataEmissao",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fracoes",
+				"outputs": [
+					{
+						"internalType": "uint16",
+						"name": "",
+						"type": "uint16"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "novoRating",
+						"type": "string"
+					}
+				],
+				"name": "mudaRating",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nomeEmissor",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rating",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "valorNominal",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "visitas",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Jeff Prestes",
+			"details": "Operacoes de uma debenture",
+			"events": {
+				"NovoPrazoPagamento(uint256,uint256)": {
+					"details": "Emitido quando um novo prazo de pagamento é definido"
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"changeOwner(address)": {
+					"details": "Change owner",
+					"params": {
+						"newOwner": "address of new owner"
+					}
+				},
+				"dataEmissao()": {
+					"details": "Retorna a data da emissao."
+				},
+				"fracoes()": {
+					"details": "retorna o valor da variavel fracoes"
+				},
+				"getOwner()": {
+					"details": "Return owner address ",
+					"returns": {
+						"_0": "address of owner"
+					}
+				},
+				"mudaRating(string)": {
+					"details": "muda o rating",
+					"params": {
+						"novoRating": "novo rating da debenture"
+					}
+				},
+				"nomeEmissor()": {
+					"details": "Retorna o nome do Emissor."
+				},
+				"valorNominal()": {
+					"details": "Retorna o valor nominal."
+				}
+			},
+			"title": "Debenture",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"fracoes()": {
+					"notice": "informa o numero de fracoes da debenture"
+				},
+				"mudaRating(string)": {
+					"notice": "dependendo da situacao economica a empresa avaliadora pode mudar o rating"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"titulos/debenture.sol": "Debenture"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"titulos/debenture.sol": {
+			"keccak256": "0x8a5751fd30f89945607d3787cba91bf3a9823f62055950598faa83116b24792b",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://431c5d318a15b1852087bd23d8e90381030b517f6a65357781ab485dec134311",
+				"dweb:/ipfs/QmbBcBt2jsC5EP6h1wtDr4PaMhHEgWWwV8C6ysC8b5hY9c"
+			]
+		},
+		"titulos/owner.sol": {
+			"keccak256": "0x972733055e6d5230657de596cfce5dba5b58bf06efb688cc3c2d7d35773ca4e8",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://2bb30db6fde76c1a377a3be271d63282f6fa231013a429c898bf22e1af9b6985",
+				"dweb:/ipfs/QmXjsy7zrfuKrK26HdyWPe2NCwQCakA8Ezbsyj4gob57GA"
+			]
+		},
+		"titulos/titulo.sol": {
+			"keccak256": "0x403ed8fc7ef0c31643f136904bc0e01d22413d722fa7906ac09b087a73a38644",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://0fabfc6477a15f99aa42d9ab9dbecd8347f17f34ab11286baf06520bb5d81c18",
+				"dweb:/ipfs/QmNQ9Mz1B1c2s9RB6jndZCHFrnrWyUoMa3UoTosNdURWAK"
+			]
+		}
+	},
+	"version": 1
+}

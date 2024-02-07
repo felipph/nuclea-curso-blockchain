@@ -1,0 +1,135 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "prazoAntigo",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "prazoNovo",
+						"type": "uint256"
+					}
+				],
+				"name": "NovoPrazoPagamento",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "dataEmissao",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "detalhesDoTitulo",
+				"outputs": [
+					{
+						"internalType": "contract Titulo",
+						"name": "contrato",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nomeEmissor",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "valorNominal",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Jeff Prestes",
+			"details": "Define funcoes de um titulo",
+			"events": {
+				"NovoPrazoPagamento(uint256,uint256)": {
+					"details": "Emitido quando um novo prazo de pagamento é definido"
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"dataEmissao()": {
+					"details": "Retorna a data da emissao."
+				},
+				"nomeEmissor()": {
+					"details": "Retorna o nome do Emissor."
+				},
+				"valorNominal()": {
+					"details": "Retorna o valor nominal."
+				}
+			},
+			"title": "Titulo",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"titulos/titulo.sol": "Titulo"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"titulos/titulo.sol": {
+			"keccak256": "0x4c861acbbc2dd6c67229f129d7ec15b77b1c71f5eb90e60d3092f411b74b9f9f",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://3eaefb78351466cfc8c2f3e8596035bf077cda595eafa447401ba54378a53349",
+				"dweb:/ipfs/QmePohNXbNTEqhRRdNk241mpyRC64HsQDgAPTWwHePrfVh"
+			]
+		}
+	},
+	"version": 1
+}
