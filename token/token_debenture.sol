@@ -1,10 +1,32 @@
-/*
-SPDX-License-Identifier: CC-BY-4.0
-(c) Desenvolvido por Jeff Prestes
-This work is licensed under a Creative Commons Attribution 4.0 International License.
-*/
-
+// SPDX-License-Identifier: GPL-3.0
 pragma solidity 0.8.19;
+
+/**
+ * @title Titulo
+ * @dev Define funcoes de um titulo
+ * @author Felipph Calado
+ */
+interface Titulo {
+
+    /**
+     * @dev Retorna o valor nominal.
+     */
+    function valorNominal() external view returns (uint256);
+
+    /**
+     * @dev Retorna a data da emissao.
+     */
+    function dataEmissao() external view returns (uint256);
+
+    /**
+     * @dev Emitido quando um novo prazo de pagamento é definido
+     */
+    event NovoPrazoPagamento(uint256 prazoAntigo, uint256 prazoNovo);
+
+    function detalhesDoTitulo() external view returns ( Titulo contrato );
+
+}
+
 
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP.
@@ -105,18 +127,27 @@ contract Ownable {
     
 }
 
-/// @title ERC-20 Token template
-contract CaladonTokenERC20 is IERC20, Ownable {
-    string private myName;
-    string private mySymbol;
-    uint256 immutable valorUnitario = 100; //um real por unidade
-    uint256 private qntDeTokens;
-    uint256 private _vlrTotalEstoque;
-    uint256 public decimals;
+
+
+/**
+ * @title Debenture
+ * @dev Operacoes de uma debenture
+ * @author Felipph Calado
+ */
+ contract DebentureQuaseNada is Titulo, Ownable, IERC20 {
 
     uint256 immutable _dataEmissao;
+    uint8 immutable _decimais;
     uint256 _prazoPagamento;
-    string public _rating;
+    string private myName;
+    string private mySymbol;
+    uint256 public decimals;
+
+    uint256 immutable _valorUnitario = 100; //um real por unidade
+    uint256 private _fracoes; //quantidade de tokens
+    uint256 private _vlrTotalEstoque; //valor total do estoque inicial
+
+    string private _rating;
 
     mapping (address=>uint256) balances;
     mapping (address=>mapping (address=>uint256)) ownerAllowances;
@@ -135,18 +166,79 @@ contract CaladonTokenERC20 is IERC20, Ownable {
 
     modifier tokenAmountValid(uint256 amount) {
         require(amount > 0);
-        require(amount <= qntDeTokens);
+        require(amount <= _fracoes);
         _;
     }
 
-    constructor() {
-        myName = "Debenture Caladon Token SA";
-        mySymbol = "CALDON0224";
+
+    constructor() {        
+        _decimais = 2;
+        _dataEmissao = block.timestamp;
+        _prazoPagamento = _dataEmissao + 90 days;
+        _rating = "AAA+";
+        myName = "Debenture Quase Nada S/A"; 
+        mySymbol = "DOMRAMON51";
         decimals = 2;
         mint(msg.sender, (1000000000 * (10 ** decimals)));
-        _dataEmissao = block.timestamp;
-        _rating = "AAA+";
+        emit NovoPrazoPagamento(_dataEmissao, _prazoPagamento);
     }
+
+    /**
+     * @dev Retorna o valor nominal.
+     */
+    function valorNominal() external pure returns (uint256) {
+        return _valorUnitario;
+    }
+
+    /**
+     * @dev Retorna o valor nominal.
+     */
+    function rating() external view returns (string memory) {
+        return _rating;
+    }
+
+    /**
+     * @dev Retorna o nome do Emissor.
+     */
+    function nomeEmissor() external view returns (string memory) {
+        return myName;
+    }
+
+    /**
+     * @dev Retorna a data da emissao.
+     */
+    function dataEmissao() external view returns (uint256) {
+        return _dataEmissao;
+    }
+
+    /**
+    * @dev muda o rating
+    * @notice dependendo da situacao economica a empresa avaliadora pode mudar o rating
+    * @param novoRating novo rating da debenture
+    */
+    function mudaRating(string memory novoRating) external onlyOwner returns (bool) {
+        _rating = novoRating;
+        return true;
+    }
+
+    function alteraFracoes(uint16 fracoes_) external onlyOwner returns (bool) {
+        require(fracoes_ >=100, "numero de fracoes baixo");
+        _fracoes = fracoes_;
+        return true;
+    }
+
+    /**
+    * @dev retorna o valor da variavel fracoes
+    * @notice informa o numero de fracoes da debenture
+    */
+    function fracoes() external view returns (uint256) {
+        return _fracoes;
+    }
+
+    function detalhesDoTitulo() external view returns ( Titulo contrato ) {
+        return this;
+    }
+
 
     function name() public view returns(string memory) {
         return myName;
@@ -157,7 +249,7 @@ contract CaladonTokenERC20 is IERC20, Ownable {
     }
 
     function totalSupply() public override view returns(uint256) {
-        return qntDeTokens;
+        return _fracoes;
     }
 
     function balanceOf(address tokenOwner) public override view returns(uint256) {
@@ -194,8 +286,8 @@ contract CaladonTokenERC20 is IERC20, Ownable {
     function mint(address account, uint256 amount) public onlyOwner returns (bool) {
         require(account != address(0), "ERC20: mint to the zero address");
         
-        qntDeTokens += amount;
-        _vlrTotalEstoque += amount;
+        _fracoes += amount;
+        _vlrTotalEstoque += amount * _valorUnitario;
         balances[account] += amount;
         emit Transfer(address(0), account, amount);
         return true;
@@ -204,9 +296,10 @@ contract CaladonTokenERC20 is IERC20, Ownable {
     function burn(address account, uint256 amount) public onlyOwner returns (bool) {
         require(account != address(0), "ERC20: burn from address");        
         balances[account] -= amount;
-        qntDeTokens -= amount;
-        _vlrTotalEstoque -= amount;
+        _fracoes -= amount;
+        _vlrTotalEstoque -= amount * _valorUnitario;
         emit Transfer(account, address(0), amount);
         return true;
     }
-}
+
+ }

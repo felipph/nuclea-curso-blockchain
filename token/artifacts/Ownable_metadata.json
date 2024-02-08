@@ -57,7 +57,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"token/caladon_token.sol": "Ownable"
+			"token/token_debenture.sol": "Ownable"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -71,12 +71,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"token/caladon_token.sol": {
-			"keccak256": "0x6593b8a92416288f43857c7ab8d53ff093ada4ef558d3a8d0b65baaf3af377a4",
-			"license": "CC-BY-4.0",
+		"token/token_debenture.sol": {
+			"keccak256": "0x65457e890aa0378d67c566630c46a470c2d012f8f1ee8829e49ce05dad4e217d",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://f9b149f6719b2b679632bf9609452edb4ba50f804cf7fc6313e6b979499bffb3",
-				"dweb:/ipfs/Qmbkd8yw5h1r12EFi8ii43ZntamGn9vfdWaV7EZDx11JE2"
+				"bzz-raw://a688dd43eb3c1b2d6df961c2c8f5c0883355e67eda68539963fc996a4a307658",
+				"dweb:/ipfs/QmZELFLBt5GLnDUAhYM56onRLB4rptBiTpP4H7jhzSUdSh"
 			]
 		}
 	},

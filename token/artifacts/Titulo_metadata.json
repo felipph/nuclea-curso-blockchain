@@ -1,0 +1,119 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "prazoAntigo",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "prazoNovo",
+						"type": "uint256"
+					}
+				],
+				"name": "NovoPrazoPagamento",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "dataEmissao",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "detalhesDoTitulo",
+				"outputs": [
+					{
+						"internalType": "contract Titulo",
+						"name": "contrato",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "valorNominal",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Felipph Calado",
+			"details": "Define funcoes de um titulo",
+			"events": {
+				"NovoPrazoPagamento(uint256,uint256)": {
+					"details": "Emitido quando um novo prazo de pagamento é definido"
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"dataEmissao()": {
+					"details": "Retorna a data da emissao."
+				},
+				"valorNominal()": {
+					"details": "Retorna o valor nominal."
+				}
+			},
+			"title": "Titulo",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"token/token_debenture.sol": "Titulo"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"token/token_debenture.sol": {
+			"keccak256": "0x65457e890aa0378d67c566630c46a470c2d012f8f1ee8829e49ce05dad4e217d",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://a688dd43eb3c1b2d6df961c2c8f5c0883355e67eda68539963fc996a4a307658",
+				"dweb:/ipfs/QmZELFLBt5GLnDUAhYM56onRLB4rptBiTpP4H7jhzSUdSh"
+			]
+		}
+	},
+	"version": 1
+}
