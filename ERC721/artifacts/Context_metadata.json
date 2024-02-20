@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ERC721/renavan.sol": "Context"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ERC721/renavan.sol": {
+			"keccak256": "0xb7291ff65814b3e9a9f44f8cab9b3562d8fcf1260c0d3a855986f32805c06a3f",
+			"license": "CC-BY-4.0",
+			"urls": [
+				"bzz-raw://5df1349efde1d70ca56826f7ced4e032721e4a141fcef6c5f4bce75e3d833af0",
+				"dweb:/ipfs/QmdurT2AfKEKPYHJNMn72gg3vo7pHJXbukfmTJ76q1HbQM"
+			]
+		}
+	},
+	"version": 1
+}

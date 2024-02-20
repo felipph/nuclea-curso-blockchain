@@ -1,0 +1,18 @@
+{
+    "title": "Metradata Carro Especial",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "FIAT Uno 1.6R Turbo"
+        },
+        "description": {
+            "type": "string",
+            "description": "FIAT Uno 1.6R Turbo produzido nos anos 90"
+        },
+        "image": {
+            "type": "string",
+            "description": "https://cdn.motor1.com/images/mgl/V90pz/s1/carros-para-sempre-conheca-o-legado-esportivo-do-fiat-uno.jpg"
+        }
+    }
+}
